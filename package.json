@@ -8,7 +8,10 @@
     "test": "standard && npm run deps && NODE_ENV=test node test",
     "test:cov": "standard && npm run deps && NODE_ENV=test istanbul cover test.js"
   },
-  "repository": "JDvorak/pull-offset-limit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdvorak/pull-offset-limit.git"
+  },
   "keywords": [
     "pull-stream",
     "limit",
@@ -25,5 +28,10 @@
     "istanbul": "^0.4.5",
     "standard": "^8.6.0",
     "tape": "^4.6.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/jdvorak/pull-offset-limit/issues"
+  },
+  "homepage": "https://github.com/jdvorak/pull-offset-limit#readme",
+  "author": "John Dvorak <john@johnsdvorak.com>"
 }
