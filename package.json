@@ -1,6 +1,6 @@
 {
   "name": "pull-offset-limit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A pull-stream that filters until X elements, and stops streaming after Y elements.",
   "main": "index.js",
   "scripts": {

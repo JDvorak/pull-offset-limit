@@ -21,6 +21,10 @@ function pullLimit (offset, limit, onLimit) {
     }
   }
 
+  function ifOffsetPassed () {
+    return oi++ > offset
+  }
+
   function ifLimitAbort () {
     if (++li > limit) {
       limitReached = true
@@ -31,7 +35,7 @@ function pullLimit (offset, limit, onLimit) {
   abortable = Abortable(_onLimit)
 
   if (offset != null || offset <= 0) {
-    pipeline.push(filter(() => (oi++ > offset)))
+    pipeline.push(filter(ifOffsetPassed))
   }
 
   if (limit != null) {
