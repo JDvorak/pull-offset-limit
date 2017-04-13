@@ -7,7 +7,7 @@ test('should stop after n elements', function (t) {
   var c = 0
 
   var drain = pull.drain(function () {
-    if (++c > n) throw new Error('Stream should have aborted at the limit.')
+    if (c++ > n) throw new Error('Stream should have aborted at the limit.')
   }, function () {
     t.assert(c === n, 'The count is equal to the limit.')
     t.end()

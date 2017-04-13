@@ -26,7 +26,7 @@ function pullLimit (offset, limit, onLimit) {
   }
 
   function ifLimitAbort () {
-    if (++li > limit) {
+    if (li++ >= limit) {
       limitReached = true
       abortable.abort()
     }
